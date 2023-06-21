@@ -36,5 +36,5 @@ export default function fetchAnimais(url, target) {
   }
 
   return criarAnimais()
-  fetchAnimais('./animaisapi.json');
+
 }
