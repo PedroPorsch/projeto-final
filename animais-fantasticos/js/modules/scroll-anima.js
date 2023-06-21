@@ -1,10 +1,16 @@
 export default class AnimacaoScroll {
   constructor(sections){
-     this.sections = document.querySelectorAll(sections);
+    this.sections = document.querySelectorAll(sections);
     this.windowMetade = window.innerHeight * 0.6;
     this.animaScroll = this.animaScroll.bind(this)
   }
   
+  // getDistance(){
+  //     this.sections.forEach((section) =>{
+  //     const sectionTop = section.getBoundingClientRect().top;
+  //     console.log(sectionTop)
+  //   })
+  // }
 
   animaScroll() {
     this.sections.forEach((section) => {
@@ -19,6 +25,7 @@ export default class AnimacaoScroll {
   }
 
   init(){
+    // this.getDistance()
     this.animaScroll()
     window.addEventListener('scroll', this.animaScroll)
   }
